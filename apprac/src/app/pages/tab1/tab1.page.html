@@ -1,0 +1,34 @@
+<ion-header no-border translucent>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="end">
+      <ion-icon slot="icon-only" mode="ios" name="contacts"></ion-icon>
+    </ion-buttons>
+    <ion-title text-center>
+     RED COLECTIVA
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+
+  <!-- Refresher -->
+  <ion-refresher slot="fixed" (ionRefresh)="Recargar($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+
+  <!-- Renderizacion de Posts -->
+  <!-- los que estan entre comillas hace referencia a lo del tab1.ts -->
+<app-posts [posts]="posts"></app-posts> 
+
+
+
+  <!-- InfiniteScroll -->
+  <ion-infinite-scroll    [disabled]="!habilitado"
+                          threshold="150px" (ionInfinite)="siguientes($event)">
+    <ion-infinite-scroll-content>
+</ion-infinite-scroll-content>
+      
+  </ion-infinite-scroll>
+    
+</ion-content>

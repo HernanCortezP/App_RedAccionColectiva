@@ -1,0 +1,7 @@
+{
+  "name": "apprac",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
